@@ -1,0 +1,320 @@
+version: '3.1'
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: farming positive
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: show_interest
+      - action: utter_interest
+      - intent: show_interest_farming
+      - action: utter_farming
+      - intent: resources_positive
+      - action: utter_resources_positive
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: farming negative
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: show_interest
+      - action: utter_interest
+      - intent: show_interest_farming
+      - action: utter_farming
+      - intent: resources_negative
+      - action: utter_resources_negative
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: enhance skills farming resource positive
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: enhance_skills
+      - action: utter_enhance_skills
+      - intent: show_interest_farming
+      - action: utter_farming
+      - intent: resources_positive
+      - action: utter_resources_positive_skill
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: enhance skills farming resource negative
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: enhance_skills
+      - action: utter_enhance_skills
+      - intent: show_interest_farming
+      - action: utter_farming
+      - intent: resources_negative
+      - action: utter_resources_negative_skill
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: enhance skills clothing resource positive
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: enhance_skills
+      - action: utter_enhance_skills
+      - intent: show_interest_clothing
+      - action: utter_clothing
+      - intent: resources_positive
+      - action: utter_resources_positive_skill
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: enhance skills clothing resource negative
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: enhance_skills
+      - action: utter_enhance_skills
+      - intent: show_interest_clothing
+      - action: utter_clothing
+      - intent: resources_negative
+      - action: utter_resources_negative_skill
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: enhance skills food resource positive
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: enhance_skills
+      - action: utter_enhance_skills
+      - intent: show_interest_food
+      - action: utter_food
+      - intent: resources_positive
+      - action: utter_resources_positive_skill
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: enhance skills food resource negative
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: enhance_skills
+      - action: utter_enhance_skills
+      - intent: show_interest_food
+      - action: utter_food
+      - intent: resources_negative
+      - action: utter_resources_negative_skill
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: farming with land and 25k invest
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: need_business_ideas
+      - action: utter_need_business_ideas
+      - intent: show_interest_farming
+      - action: utter_sugg_farming
+      - intent: affirm
+      - action: utter_farming_capital
+      - intent: farming_range1
+      - action: utter_farming_rang1
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: farming with land and 50k invest
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: need_business_ideas
+      - action: utter_need_business_ideas
+      - intent: show_interest_farming
+      - action: utter_sugg_farming
+      - intent: affirm
+      - action: utter_farming_capital
+      - intent: farming_range2
+      - action: utter_farming_rang2
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: farming with land and >50k invest
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: need_business_ideas
+      - action: utter_need_business_ideas
+      - intent: show_interest_farming
+      - action: utter_sugg_farming
+      - intent: affirm
+      - action: utter_farming_capital
+      - intent: farming_range3
+      - action: utter_farming_rang3
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: farming with no land and cattle
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: need_business_ideas
+      - action: utter_need_business_ideas
+      - intent: show_interest_farming
+      - action: utter_sugg_farming
+      - intent: deny
+      - action: utter_farming_cattle
+      - intent: affirm
+      - action: utter_farming_catt_yes
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: farming with no land and no cattle
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: need_business_ideas
+      - action: utter_need_business_ideas
+      - intent: show_interest_farming
+      - action: utter_sugg_farming
+      - intent: deny
+      - action: utter_farming_cattle
+      - intent: deny
+      - action: utter_idea_not_suggest
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: clothing no skills yes learn no shop
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: need_business_ideas
+      - action: utter_need_business_ideas
+      - intent: show_interest_clothing
+      - action: utter_sugg_clothing
+      - intent: deny
+      - action: utter_skills_learn_yes
+      - action: utter_shop
+      - intent: deny
+      - action: utter_clothing_shop_no
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: clothing no skills yes learn yes shop
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: need_business_ideas
+      - action: utter_need_business_ideas
+      - intent: show_interest_clothing
+      - action: utter_sugg_clothing
+      - intent: deny
+      - action: utter_skills_learn_yes
+      - action: utter_shop
+      - intent: affirm
+      - action: utter_clothing_shop_yes
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: clothing yes skills yes shop
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: need_business_ideas
+      - action: utter_need_business_ideas
+      - intent: show_interest_clothing
+      - action: utter_sugg_clothing
+      - intent: affirm
+      - action: utter_shop
+      - intent: affirm
+      - action: utter_clothing_shop_yes
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: clothing yes skills no shop
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: need_business_ideas
+      - action: utter_need_business_ideas
+      - intent: show_interest_clothing
+      - action: utter_sugg_clothing
+      - intent: affirm
+      - action: utter_shop
+      - intent: deny
+      - action: utter_clothing_shop_no
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: food shop yes
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: need_business_ideas
+      - action: utter_need_business_ideas
+      - intent: show_interest_food
+      - action: utter_shop
+      - intent: deny
+      - action: utter_food_shop_no
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: food shop no
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: need_business_ideas
+      - action: utter_need_business_ideas
+      - intent: show_interest_food
+      - action: utter_shop
+      - intent: affirm
+      - action: utter_food_shop_yes
+      - action: utter_did_that_help
+      - intent: yes_no
+      - action: utter_goodbye
+
+  - story: restart
+    steps:
+      - intent: restart
+      - action: action_restart

@@ -1,0 +1,212 @@
+version: '3.1'
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - yes_no
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - show_interest
+  - show_interest_farming
+  - show_interest_clothing
+  - show_interest_food
+  - resources_positive
+  - resources_negative
+  - enhance_skills
+  - need_business_ideas
+  - farming_range1
+  - farming_range2
+  - farming_range3
+  - restart
+
+responses:
+  utter_greet:
+    - text: "Welcome to Buzz Women Counselling chatbot.\n\nBuzz Women is a non-profit organization, established in 2012 that works primarily in the domain of Gender, Business & Finance and Skill Development.\n\nReach out to us at our official links:\nOfficial Website: https://www.buzzwomen.org/\nFacebook: https://www.facebook.com/buzzwomen/\nInstagram: https://www.instagram.com/buzzwomen/\n\nWe can help you to become financially independent. We will ask a few questions to get to know you better. Let's get started!"
+      buttons:
+        - title: 'Need business ideas'
+          payload: '/need_business_ideas'
+        - title: 'Enhance skills for existing business'
+          payload: '/enhance_skills'
+      button_type: 'vertical'
+
+  utter_interest:
+    - text: 'What are your interests?'
+
+  utter_farming:
+    - text: 'What resources do you have related to farming?'
+      buttons:
+        - title: 'I have capital and land'
+          payload: '/resources_positive'
+        - title: 'I have cattle'
+          payload: '/resources_positive'
+        - title: 'I do not have any resource'
+          payload: '/resources_negative'
+      button_type: 'vertical'
+
+  utter_clothing:
+    - text: 'What resources or skills do you have for a clothing business?'
+      buttons:
+        - title: 'Can stitch clothes and knit sweaters'
+          payload: '/resources_positive'
+        - title: 'Already have a clothes stitching shop'
+          payload: '/resources_positive'
+        - title: 'I do not have any resource'
+          payload: '/resources_negative'
+      button_type: 'vertical'
+
+  utter_food:
+    - text: 'What resources do you have related to a food business?'
+      buttons:
+        - title: 'I run a small grocery store'
+          payload: '/resources_positive'
+        - title: 'I offer Tiffin service'
+          payload: '/resources_positive'
+        - title: 'I do not have any resource'
+          payload: '/resources_negative'
+      button_type: 'vertical'
+
+  utter_resources_positive:
+    - text: 'Great! You can go ahead..'
+
+  utter_resources_positive_skill:
+    - text: "Great! I am providing you with the following articles! Do read them!\n\t1. Expand Already Existing Business => https://www.entrepreneur.com/article/306049\n\t2. Help Your Business Grow => https://www.fundera.com/blog/10-indicators-time-to-expand-your-business\n\tThe government also offers some schemes for the growth of small businesses. They are:\n\t1. Pradhan Mantri Mudra Yojana\n\t2. Credit Guarantee Trust Fund for Micro & Small Enterprises\n\t3. Financial Support to MSMEs in ZED Certification Scheme\n\t4. Credit Linked Capital Subsidy for Technology Upgradation\n\t5. Design Clinic for Design Expertise to MSMEs\n\tTo explore further, visit this link - Grow Small Businesses => https://www.msmex.in/learn/government-schemes-for-startups-and-msmes-in-india/"
+
+  utter_resources_negative:
+    - text: 'I suggest borrowing money. These can be some sources => Friends / Family / Banks / Money Lenders'
+
+  utter_resources_negative_skill:
+    - text: 'Umm! Sorry to hear that you do not have enough resources! I suggest you borrowing money. Some sources can be friends, family and banks'
+
+  utter_enhance_skills:
+    - text: 'In which category does your existing business falls?'
+      buttons:
+        - title: 'Farming'
+          payload: '/show_interest_farming'
+        - title: 'Clothing / Textile'
+          payload: '/show_interest_clothing'
+        - title: 'Food sector'
+          payload: '/show_interest_food'
+      button_type: 'vertical'
+
+  utter_need_business_ideas:
+    - text: 'Please select your field of interest:'
+      buttons:
+        - title: 'Farming Related Businesses'
+          payload: '/show_interest_farming'
+        - title: 'Clothing Related Businesses'
+          payload: '/show_interest_clothing'
+        - title: 'Food Related Businesses'
+          payload: '/show_interest_food'
+      button_type: 'vertical'
+
+  utter_sugg_farming:
+    - text: 'Do you have land or plot for farming?'
+      buttons:
+        - title: 'I have land'
+          payload: '/affirm'
+        - title: "I don't have land"
+          payload: '/deny'
+      button_type: 'vertical'
+
+  utter_farming_capital:
+    - text: 'How much money can you invest in any farming business?'
+      buttons:
+        - title: 'Less than Rs. 25000'
+          payload: '/farming_range1'
+        - title: 'Between Rs. 25000 and Rs. 50000'
+          payload: '/farming_range2'
+        - title: 'More than Rs. 50000'
+          payload: '/farming_range3'
+      button_type: 'vertical'
+
+  utter_farming_rang1:
+    - text: "Great! Here are some business ideas with recommended YouTube Guides:\n\n\t1. Goat Farming => https://www.youtube.com/watch?v=yCc0uXeMvC4"
+
+  utter_farming_rang2:
+    - text: "Great! Here are some business ideas with recommended YouTube Guides:\n\n\t1. Animal Husbandry => https://www.youtube.com/watch?v=sQMLHIIjqZ8\n\n\t2. Poultry => https://www.youtube.com/watch?v=Pp99RuwSDq4"
+
+  utter_farming_rang3:
+    - text: "Great! Here are some business ideas with recommended YouTube Guides:\n\n\t1. Organic Farming => https://www.youtube.com/watch?v=wTd49InwoKE"
+
+  utter_farming_cattle:
+    - text: 'Would you be able to invest in buying cattle like goats or cows?'
+      buttons:
+        - text: 'Yes, I can.'
+          payload: '/affirm'
+        - text: "No, I can't."
+          payload: '/deny'
+      button_type: 'vertical'
+
+  utter_farming_catt_yes:
+    - text: "Great! Here are some business ideas:\n\n\t1. You can sell dairy products such as milk, paneer, yoghurt."
+
+  utter_idea_not_suggest:
+    - text: "Sorry. The selected field is not suggested.\nPlease look into some other fields"
+
+  utter_sugg_clothing:
+    - text: 'Do you have prior experience/skills with stitching and designs?'
+      buttons:
+        - title: 'I have prior experience.'
+          payload: '/affirm'
+        - title: "I don't have prior experience."
+          payload: '/deny'
+      button_type: 'vertical'
+
+  utter_skills_learn_yes:
+    - text: "Here are some Youtube tutorials to guide you:\n\n\t1. Learn Stitching => https://www.youtube.com/playlist?list=PLPWR--xLa5dnRvCwcAuHsggXdaArSfsAK\n\n\t2. Learn fabric designing => https://www.youtube.com/watch?v=t4RB3CXtdQo"
+
+  utter_shop:
+    - text: 'Do you have money to invest in a shop?'
+      buttons:
+        - title: 'I can invest in a shop.'
+          payload: '/affirm'
+        - title: "I can't invest in a shop."
+          payload: '/deny'
+      button_type: 'vertical'
+
+  utter_clothing_shop_no:
+    - text: "Great! Here are some business ideas with recommended YouTube Guides:\n\n\t1. You can sell clothes online => https://www.youtube.com/watch?v=GbXSHk2J6-c"
+
+  utter_clothing_shop_yes:
+    - text: "Great! Here are some business ideas with recommended YouTube Guides:\n\n\t1. Start a garments shop => https://www.youtube.com/watch?v=Y7IWSVhIX0Y\n\n\t2. Start a saree shop => https://www.youtube.com/watch?v=ZydoD6prUr0"
+
+  utter_food_shop_no:
+    - text: "Great! Here are some business ideas with recommended YouTube Guides:\n\n\t1. Start papad business from home => https://www.youtube.com/watch?v=IYn5KlbEIG4\n\n\t2. Start pickle business from home => https://www.youtube.com/watch?v=MzP5NEzdlow"
+
+  utter_food_shop_yes:
+    - text: "Great! Here are some business ideas with recommended YouTube Guides:\n\n\t1. Start a juice and coconut shop => https://www.youtube.com/watch?v=_TbMxX9qxz8\n\n\t2. Start a tea shop => https://www.youtube.com/watch?v=sRSVfu6WigI\n\n\t3. Start a Kirana shop or Petty shop => https://www.youtube.com/watch?v=k4ktCcQKbnI"
+
+  utter_cheer_up:
+    - text: 'Here is something to cheer you up:'
+      image: 'https://i.imgur.com/nGF1K8f.jpg'
+
+  utter_did_that_help:
+    - text: 'Did that help you?'
+      buttons:
+        - title: 'Yes'
+          payload: '/yes_no'
+        - title: 'No'
+          payload: '/yes_no'
+
+  utter_happy:
+    - text: 'Great, carry on!'
+
+  utter_goodbye:
+    - text: "Thanks for chatting with us. Have a great day!\n\nYou can provide us your valuable feedback at our Official Website => https://www.buzzwomen.org/contact\n\nDon't forget - A financially independent woman has the ability to live life on her own terms :)\n\nPress \"Chat Again\" to restart conversation."
+      buttons:
+        - title: 'Chat Again'
+          payload: '/restart'
+      button_type: 'vertical'
+
+  utter_iamabot:
+    - text: 'I am a bot, powered by Rasa.'
+
+actions:
+  - action_restart
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

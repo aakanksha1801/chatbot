@@ -1,0 +1,213 @@
+version: '3.1'
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - Okay
+      - I can try it
+      - thanks
+      - yea
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: yes_no
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - Okay
+      - I can try it
+      - thanks
+      - yea
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: show_interest
+    examples: |
+      - I am interested in earning money
+      - I am interested in starting my business
+      - I want to be financially independent
+      - I want to start a business
+      - I want to help my family financially
+      - I need some assistance in starting my business
+
+  - intent: show_interest_farming
+    examples: |
+      - I want to start something farming related
+      - I want to do farming
+      - farming
+      - I have an exisiting business related to farming
+      - I have a farming related business
+
+  - intent: show_interest_clothing
+    examples: |
+      - I want to start something related to clothes
+      - I know how to stitch clothes
+      - Clothing
+      - Textile industry
+      - I have the basic skill of stitchig cloths
+      - I can knit sweaters
+      - I have an exisiting business related to clothing
+      - I have a cloth shop
+
+  - intent: show_interest_food
+    examples: |
+      - I want to start a food store
+      - I want to open a vegetable shop
+      - vegetable store
+      - food store
+      - I have a small vegetable shop
+      - I have a small canteen
+      - I have a tiffin service
+      - I sell fruits
+      - I sell fast food
+
+  - intent: resources_positive
+    examples: |
+      - I have capital
+      - I have land
+      - I have resources
+      - I have cattle
+      - I have money to invest
+
+  - intent: resources_negative
+    examples: |
+      - I don't have money
+      - I don't have land
+      - I don't have resources
+
+  - intent: enhance_skills
+    examples: |
+      - I already have my own business
+      - I want to enhance my existing skills
+      - My business is facing losses
+      - I want to develop my skills
+      - I want to upskill my business
+      - I want to learn new skills
+      - Suggest some skills
+
+  - intent: need_business_ideas
+    examples: |
+      - I need business ideas.
+      - I need business suggestions
+      - I need some ideas to start a business
+      - I need some suggestions to start a business
+
+  - intent: farming_range1
+    examples: |
+      - < Rs. 25000
+      - Rs. 0 - 25000
+      - Less than Rs. 25000
+      - I can invest Rs. 25000
+
+  - intent: farming_range2
+    examples: |
+      - < Rs. 50000
+      - Rs. 25000 - 50000
+      - Between Rs. 25000 and Rs. 50000
+      - I can invest between Rs. 25000 and Rs. 50000
+
+  - intent: farming_range3
+    examples: |
+      - > Rs. 50000
+      - More than Rs. 50000
+      - I can invest more than Rs. 50000
+
+  - intent: restart
+    examples: |
+      - chat again
+      - restart conversation
+      - restart
+      - start again
